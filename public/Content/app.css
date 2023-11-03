@@ -1,0 +1,43 @@
+/* custom css goes here */
+
+@charset "UTF-8";
+
+body {
+    background-color: #a0a0c0; /* Light blue-gray background */
+    font-family: 'Times New Roman', Verdana, Geneva, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#Wrapper {
+    width: 960px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: #778899; /* LightSlateGrey background */
+}
+
+#Right-column {
+    float: right;
+    width: 360px;
+    background-color: #c0c0c0; /* Silver background */
+    height: 600px;
+}
+
+/* You can customize the colors further by specifying your preferred hexadecimal or color names. */
+.AboutMe{
+margin-top: 0 px;
+width: 450px;
+height: 100px;
+background-color: lavenderblush;
+text-align: center;
+align-self: center;
+transform: translate(110%, 0%);
+}
+
+.Video{
+    margin-top: 20px;
+   margin-right: -400px;
+}
+
+}
+#right-column
