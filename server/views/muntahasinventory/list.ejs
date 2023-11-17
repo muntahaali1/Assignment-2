@@ -1,0 +1,48 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/navbar.ejs %>
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><% title %> </h1>
+
+            <a href ="muntahasinventory/add" class = "btn btn-primary" role=button> 
+            <i class = "fas fa-plus-circle"> </i> add a book
+            </a> 
+            <br> 
+
+        <br>
+        <table class="table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-1">Name</th>
+                <th class="text-center col-1">Colour</th>
+                <th class="text-center col-4">Material</th>
+                <th class="text-center col-2">Description</th>
+                <th class="text-center col-1">Price</th>
+            </tr>
+            <% for(let count=0;count<muntahasinventoryList.length;count++) { %>
+            <tr class="d-flex">
+                <td class="text-center col-1"><%= muntahasinventoryList[count].Name %></td>
+                <td class="text-center col-1"><%= muntahasinventoryList[count].Colour %></td>
+                <td class="text-center col-4"><%= muntahasinventoryList[count].Material %></td>
+                <td class="text-center col-2"><%= muntahasinventoryList[count].Description %></td>
+                <td class="text-center col-1"><%= muntahasinventoryList[count].Price %></td>
+                 <td class="text-center col-1">
+                 <a href="muntahasinventory/edit/<%= muntahasinventoryList[count]._id %>"
+                 class= "btn btn-primary">
+                 <i class="fa-solid fa-pencil"></i> Edit </a> 
+                 </td>
+
+                <td class="text-center col-2">
+                 <a href="/muntahasinventory/<%= muntahasinventoryList[count]._id %>"
+                 class= "btn btn-danger">
+                 <i class="fa-solid fa-trash"></i> Delete </a> 
+                 </td>
+
+            <% } %>
+        </table>
+    </div>
+    </div>
+</main>
+<% include ../partials/bottomnav.ejs %>
+<% include ../partials/footer.ejs %>
